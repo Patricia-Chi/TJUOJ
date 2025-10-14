@@ -1,6 +1,6 @@
 题目来源:[TJUOJ](https://acm.tju.edu.cn/)（天津大学OJ）  
 
-跟随天津大学2025秋季学期程序设计原理课程进度更新。  
+跟随天津大学2025秋季学期程序设计原理课程（25261）进度更新。  
 
 `.cpp`文件名为题号，如文件`A1000.cpp`为题目A1000[Hello World](https://acm.tju.edu.cn/problem/A1000)的代码。  
   
