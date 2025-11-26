@@ -11,35 +11,24 @@ int T;
 int n, m, k;
 ll ans;
 string s;
-vector<int> a;
 
 void solve()
 {
-    int b, e, t;
-    cin >> b >> e >> t;
-    swap_ranges(a.begin() + b, a.begin() + e, a.begin() + t);
 }
 
 int main()
 {
+    // freopen("test.in", "r", stdin);
+    // freopen("test.out", "w", stdout);
     ios::sync_with_stdio(false);
     cin.tie(0), cout.tie(0);
-    cin >> n;
-    int tmp;
-    while (n--)
-    {
-        cin >> tmp;
-        a.push_back(tmp);
-    }
     T = 1;
-    cin >> T;
+    // cin >> T;
     while (T--)
     {
         solve();
     }
-    for (auto d : a)
-    {
-        cout << d << ' ';
-    }
+    // fclose(stdin);
+    // fclose(stdout);
     return 0;
 }
