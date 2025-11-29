@@ -10,15 +10,26 @@ const double PI = 3.141592653589793;
 int T;
 int n, m, k;
 ll ans;
-
 string s;
+
 vector<pair<int, int>> stu(107);
+
 bool cmp(pair<int, int> a, pair<int, int> b)
 {
-    
+    return a.first != b.first ? a.first < b.first : a.second < b.second;
 }
 void solve()
 {
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> stu[i].first >> stu[i].second;
+    }
+    sort(stu.begin(), stu.begin() + n, cmp);
+    for (int i = 0; i < n; i++)
+    {
+        cout << stu[i].first << " " << stu[i].second << endl;
+    }
 }
 
 int main()
