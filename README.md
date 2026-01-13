@@ -1,5 +1,7 @@
 ## 天津大学OJ题解  
 
+[![State-of-the-art Shitcode](https://img.shields.io/static/v1?label=State-of-the-art&message=Shitcode&color=7B5804)](https://github.com/trekhleb/state-of-the-art-shitcode)  
+
 目前状态：随2025级程序设计原理课程（05099）同步更新，偶尔增加OJ上其他题目。  
 
 欢迎建议和讨论。  
