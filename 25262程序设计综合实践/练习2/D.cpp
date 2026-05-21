@@ -1,0 +1,93 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define ull unsigned long long
+#define endl '\n'
+// #define int long long // 不开 long long 见祖宗
+//  #pragma GCC optimize(3)
+
+using namespace std;
+
+using vi = vector<int>;
+using vii = vector<vector<int>>;
+using pii = pair<int, int>;
+
+const double PI = 3.141592653589793;
+const int mod = 998244353;
+constexpr int N = -1;
+int T;
+int n, m, k;
+ll ans;
+string s;
+
+bool solve()
+{
+    int l;
+    if (!(cin >> l >> n >> m))
+    {
+        return false;
+    }
+    vi a(l + 1), b(n + 1), c(m + 1);
+    for (int i = 1; i <= l; i++)
+    {
+        cin >> a[i];
+    }
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> b[i];
+    }
+    for (int i = 1; i <= m; i++)
+    {
+        cin >> c[i];
+    }
+    vector<ll> sum;
+    sum.reserve(1LL * l * n);
+    for (int i = 1; i <= l; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            sum.push_back(1LL * a[i] + b[j]);
+        }
+    }
+    sort(sum.begin(), sum.end());
+    sum.erase(unique(sum.begin(), sum.end()), sum.end());
+    int q;
+    cin >> q;
+    cout << "Case " << k << ":" << endl;
+    while (q--)
+    {
+        ll x;
+        cin >> x;
+        bool ok = false;
+        for (int i = 1; i <= m; i++)
+        {
+            if (binary_search(sum.begin(), sum.end(), x - c[i]))
+            {
+                ok = true;
+                break;
+            }
+        }
+        if (ok)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+    return true;
+}
+
+int main()
+{
+    // freopen("test.in", "r", stdin);
+    // freopen("test.out", "w", stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0);
+    for (k = 1; solve(); k++)
+    {
+    }
+    // fclose(stdin);
+    // fclose(stdout);
+    return 0;
+}
